@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="meuForm">
+        <input type="text" id="nome" placeholder="Nome (min. 3 letras)">
+        <div id="erroNome" class="erro"></div>
+
+
+        <input type="password" id="senha" placeholder="Senha (min. 6 caracteres)">
+        <div id="erroSenha" class="erro"></div>
+
+
+        <button>Enviar</button>
+    </form>
+
+
+    <script>
+        const form = document.getElementById('meuForm');
+
+
+        form.onsubmit = (e) => {
+            e.preventDefault();
+            let valido = true;
+
+
+            //Validação do nome
+            const nome = document.getElementById('nome');
+            if (nome.value.lenght < 3) {
+                document.getElementById('erroNome').textContent = "Nome muito curto!";
+                valido = false;
+            }
+
+
+            //Validação da senha
+            const senha = document.getElementById('senha');
+            if (senha.value.lenght < 6) {
+                document.getElementById('erroSenha').textContent = "Senha Inválida!";
+                valido = false;
+            }
+
+
+            if (valido) {
+                alert('Formulário válido!');
+                form.reset();
+                document.querySelectorAll('erro').forEach = (e => e.textContent = '');
+            }
+        }
+       
+    </script>
+</body>
+</html>
