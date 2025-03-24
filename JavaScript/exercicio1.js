@@ -3,9 +3,9 @@ function somaNumeros1() {
     let continuar = true;
 
     while (continuar) {
-        let numero = 0;
-
-        numero = prompt ("Digite um número ou informe '0' para sair:");
+        let numero = prompt("Digite um número (ou informe '0' para sair):");
+        
+        numero = Number(numero);
 
         if (isNaN(numero)) {
             alert("Por favor, informe um número válido.");

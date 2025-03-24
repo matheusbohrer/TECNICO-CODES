@@ -1,22 +1,13 @@
 function somaNumeros2() {
-    let soma = 0;
-    let continuar = true;
+    let seconds = 300;
 
-    while (continuar) {
-        let numero = 0;
-
-        numero = prompt ("Digite um número (ou informe '0' para sair:");
-
-        if (isNaN(numero)) {
-            alert("Por favor, informe um número válido.");
-        } else {
-            soma += numero;
-        }
-
-        if (numero == 0) {
-            continuar = false;
-        }
+    if (seconds > 0) {
+        countdownElement.textContent = seconds + 'segundos restantes';
+        seconds--;
+        setTimeout(somaNumeros2, 1000);
+    } else {
+        countdownElement.textContent = 'Tempo esgotado';
     }
-
-    alert("A soma dos números é: " + soma);
 }
+
+somaNumeros2();
