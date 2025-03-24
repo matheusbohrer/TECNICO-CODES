@@ -1,4 +1,4 @@
-function somaNumeros() {
+function somaNumeros7() {
     let soma = 0;
     let continuar = true;
 
