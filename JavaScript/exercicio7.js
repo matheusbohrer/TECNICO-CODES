@@ -1,27 +1,21 @@
 function somaNumeros7() {
-    let sabor = prompt;
+    let sabores = {
+        "1": { nome: "Chocolate", preco: 1.50 },
+        "2": { nome: "Morango", preco: 2.50 },
+        "3": { nome: "Creme", preco: 2.50 },
+        "4": { nome: "Manga", preco: 3.20 },
+        "5": { nome: "Melancia", preco: 3.40 },
+        "6": { nome: "Vanilla Ice", preco: 3.00 },
+        "7": { nome: "Céu Azul", preco: 3.60 },
+        "8": { nome: "Brownie", preco: 4.00 },
+        "9": { nome: "Hawaiano", preco: 5.00 }
+    };
 
-    sabor("1. Chocolate");
-    sabor("2. Morango");
-    sabor("3. Creme ");
-    sabor("4. Manga");
-    sabor("5. Melancia");
-    sabor("6. Vanilla Ice");
-    sabor("7. Céu Azu");
-    sabor("8. Brownie");
-    sabor("9. Hawaiano");
+    let escolha = prompt("Escolha um sabor digitando o número correspondente:\n1. Chocolate\n2. Morango\n3. Creme\n4. Manga\n5. Melancia\n6. Vanilla Ice\n7. Céu Azul\n8. Brownie\n9. Hawaiano");
     
-
-    if (!letra || letra.length !== 1 || !/[a-z]/.test(letra)) {
-        alert("Por favor, digite apenas uma única letra.");
-        return;
-    }
-
-    let vogais = ["a", "e", "i", "o", "u"];
-
-    if (vogais.includes(letra)) {
-        alert(`A letra "${letra}" é uma VOGAL.`);
+    if (sabores[escolha]) {
+        alert(`Você escolheu ${sabores[escolha].nome}. O preço é R$ ${sabores[escolha].preco.toFixed(2)}.`);
     } else {
-        alert(`A letra "${letra}" é uma CONSOANTE.`);
+        alert("Opção inválida. Tente novamente.");
     }
 }
