@@ -1,22 +1,16 @@
 function somaNumeros6() {
-    let soma = 0;
-    let continuar = true;
+    let letra = prompt("Digite uma letra:").toLowerCase();
 
-    while (continuar) {
-        let numero = 0;
-
-        numero = prompt ("Digite um número (ou informe '0' para sair:");
-
-        if (isNaN(numero)) {
-            alert("Por favor, informe um número válido.");
-        } else {
-            soma += numero;
-        }
-
-        if (numero == 0) {
-            continuar = false;
-        }
+    if (!letra || letra.length !== 1 || !/[a-z]/.test(letra)) {
+        alert("Por favor, digite apenas uma única letra.");
+        return;
     }
 
-    alert("A soma dos números é: " + soma);
+    let vogais = ["a", "e", "i", "o", "u"];
+
+    if (vogais.includes(letra)) {
+        alert(`A letra "${letra}" é uma VOGAL.`);
+    } else {
+        alert(`A letra "${letra}" é uma CONSOANTE.`);
+    }
 }

@@ -1,22 +1,18 @@
 function somaNumeros4() {
-    let soma = 0;
-    let continuar = true;
+    let numeros = [];
 
-    while (continuar) {
-        let numero = 0;
-
-        numero = prompt ("Digite um número (ou informe '0' para sair:");
+    for (let i = 0; i < 4; i++) {
+        let numero = parseInt(prompt(`Digite o ${i + 1}º número inteiro:`));
 
         if (isNaN(numero)) {
-            alert("Por favor, informe um número válido.");
+            alert("Por favor, informe um número inteiro válido.");
+            i--;
         } else {
-            soma += numero;
-        }
-
-        if (numero == 0) {
-            continuar = false;
+            numeros.push(numero);
         }
     }
 
-    alert("A soma dos números é: " + soma);
+    numeros.sort((a, b) => b - a);
+
+    alert(`Os números em ordem decrescente são: ${numeros.join(", ")}`);
 }

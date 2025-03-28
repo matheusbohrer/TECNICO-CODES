@@ -1,22 +1,12 @@
 function somaNumeros5() {
-    let soma = 0;
-    let continuar = true;
+    let numero = parseInt(prompt("Digite um número inteiro:"));
 
-    while (continuar) {
-        let numero = 0;
-
-        numero = prompt ("Digite um número (ou informe '0' para sair:");
-
-        if (isNaN(numero)) {
-            alert("Por favor, informe um número válido.");
-        } else {
-            soma += numero;
-        }
-
-        if (numero == 0) {
-            continuar = false;
-        }
+    if (isNaN(numero)) {
+        alert("Por favor, informe um número válido.");
+        return;
     }
 
-    alert("A soma dos números é: " + soma);
+    let novoNumero = numero % 2 === 0 ? numero + 1 : numero - 1;
+
+    alert(`O número transformado é: ${novoNumero}`);
 }
