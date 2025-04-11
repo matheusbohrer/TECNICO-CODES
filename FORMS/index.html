@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulários HTML</title>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="name">Nome do Cliente: </label> <input type="text" id="name" name="nome_usuario">
+            <br>
+            <label for="email">Email: </label> <input type="email" id="email" name="email_usuario" required>
+            <br>
+            <label for="msg">Mensagem: </label>
+            <textarea name="msg_usuario" id="msg"></textarea>
+        </fieldset>
+    </form>
+
+    <fieldset>
+        <legend>Outros tipos de input</legend>
+        <label for="batatinha">Batata</label>
+        <input type="checkbox" id="item1" name="batatinha" value="Batata">
+        <br>
+        <label for="melancia">Melância</label>
+        <input type="checkbox" id="item2" name="melancia" value="Melância">
+        <br>
+        <br>
+        <label for="DSM6">DS24M6</label>
+        <input type="radio" id="m6" name="turma_m6" value="M6">
+        <br>
+        <label for="DSM7">DS24M7</label>
+        <input type="radio" id="m7" name="turma_m7" value="M7">
+    </fieldset>
+
+    <fieldset>
+        <label for="submit">Enviar -></label>
+        <input type="submit" value="submit">
+    </fieldset>
+</body>
+
+</html>
